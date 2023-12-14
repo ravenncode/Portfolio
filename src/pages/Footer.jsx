@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className="bg-zinc-800 h-auto py-10 px-8 md:px-20">
       <section className="text-white mb-20">
-        <div className="grid lg:grid-cols-2 lg:gap-20">
+        <div className="grid sm:grid-cols-2 lg:gap-20">
           <div className="mb-14 text-left">
             <p className="font-bold text-xl lg:text-2xl tracking-wider mb-4 ml-1">
               RAVEN JUGALBOT

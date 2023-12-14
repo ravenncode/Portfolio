@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import {
+  Bars3Icon,
+  XMarkIcon,
+  ArrowDownTrayIcon,
+} from "@heroicons/react/24/outline";
 import r from "../images/r.png";
 
 const Navbar = () => {
@@ -81,7 +85,9 @@ const Navbar = () => {
             onClick={openPDF}
             className="bg-indigo-500 hover:bg-indigo-600 transition-transform transform hover:translate-y-0.5 text-white px-4 py-2 rounded-md font-bold text-sm tracking-widest lg:ml-10 lg:my-0 my-7"
           >
-            RESUME
+            <div className="flex items-center">
+              <ArrowDownTrayIcon className="w-4 h-4 mr-2" /> RESUME
+            </div>
           </button>
         </div>
       </div>

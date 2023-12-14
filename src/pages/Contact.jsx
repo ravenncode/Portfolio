@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Contact = () => {
+  const [isButtonDisabled, setButtonDisabled] = useState(false);
+
+  const handleClick = () => {
+    setButtonDisabled(true);
+  };
   return (
     <div id="contact" className="bg-gray-100 px-4 md:px-20 xl:px-40 py-32">
       <p className="text-gray-900 font-[800] text-4xl tracking-widest text-center mb-6 heading">
@@ -16,6 +21,7 @@ const Contact = () => {
             <form
               action="https://formsubmit.co/b141c7089d169825a13c60d4a1473436"
               method="POST"
+              onSubmit={handleClick}
             >
               <input type="hidden" name="_captcha" value="false" />
               <input
@@ -27,7 +33,7 @@ const Contact = () => {
                 htmlFor="name"
                 className="block font-bold text-sm tracking-wide leading-6 text-gray-600 mb-2"
               >
-                Name
+                Name*
               </label>
               <input
                 type="text"
@@ -43,7 +49,7 @@ const Contact = () => {
                 htmlFor="name"
                 className="block font-bold text-sm tracking-wide leading-6 text-gray-600 mb-2"
               >
-                Email
+                Email*
               </label>
               <input
                 type="email"
@@ -59,7 +65,7 @@ const Contact = () => {
                 htmlFor="message"
                 className="block font-bold text-sm tracking-wide leading-6 text-gray-600 mb-2"
               >
-                Message
+                Message*
               </label>
               <textarea
                 name="message"
@@ -75,8 +81,9 @@ const Contact = () => {
               <button
                 type="submit"
                 className="bg-indigo-500 hover:bg-indigo-600 transition-transform transform hover:translate-y-0.5 text-white px-12 py-3 rounded-md font-bold text-md tracking-wider w-full sm:w-auto"
+                disabled={isButtonDisabled}
               >
-                SUBMIT
+                {isButtonDisabled ? "SUBMITTING..." : "SUBMIT"}
               </button>
             </form>
           </section>
