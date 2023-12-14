@@ -1,0 +1,75 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.heading::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 7px;
+  background-color: #6366f1;
+  margin: 0 auto;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar {
+  max-width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* blob */
+.blob {
+  background-image: url("../src/images/profile.jpg");
+  width: 380px;
+  height: 380px;
+  background-size: cover;
+  -webkit-background-position: center;
+  background-position: center center;
+  /* margin: 20px; */
+  /* box-shadow: 0 5px 5px 5px rgba(95, 107, 124, 0.2); */
+  animation: animate 5s ease-in-out infinite;
+  transition: all 1s ease-in-out;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
