@@ -19,20 +19,20 @@ const Home = () => {
   return (
     <div
       id="home"
-      className="relative bg-gray-50 px-4 md:px-20 xl:px-40 pt-20 lg:pt-40 pb-32 xl:h-screen flex flex-col justify-center"
+      className="relative bg-zinc-800 px-4 md:px-20 xl:px-40 pt-20 lg:pt-40 pb-32 xl:h-screen flex flex-col justify-center"
     >
       <div className="md:container md:mx-auto">
-        <div className="flex flex-col-reverse lg:flex-row justify-between items-center ">
-          <div className="text-center lg:text-left">
+        <div className="flex flex-col-reverse lg:flex-row justify-center items-center ">
+          <div className="text-center lg:text-left text-white">
             <p className="font-[800] text-3xl lg:text-4xl tracking-tight">
               Hello, I'm
             </p>
             <p className="font-[900] text-5xl lg:text-7xl lg:-ml-1 mb-4">
               Raven <span className="text-indigo-700">Jugalbot</span>
             </p>
-            <p className="text-gray-700 text-base lg:text-lg">
+            <p className="text-white text-base lg:text-lg">
               A passionate{" "}
-              <span className="font-[800] text-gray-600 text-xl lg:text-2xl">
+              <span className="font-[800] text-xl lg:text-2xl">
                 Web Developer{" "}
               </span>
               based in Cagayan de Oro, Philippines. 📍
@@ -67,14 +67,14 @@ const Home = () => {
               </button>
             </ScrollLink>
           </div>
-          <div className="flex justify-center lg:justify-end items-center">
+          <div className="flex justify-center items-center lg:ml-40">
             <div className="blob scale-[60%] sm:scale-75 lg:scale-100"></div>
           </div>
         </div>
       </div>
 
       <div className="absolute bottom-[2rem] left-1/2 transform -translate-x-1/2">
-        <ChevronDoubleDownIcon className="h-10 w-10 text-gray-700 animate-bounce" />
+        <ChevronDoubleDownIcon className="h-10 w-10 text-white animate-bounce" />
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white w-full drop-shadow-md px-7 lg:px-10 xl:px-20 py-7 fixed top-0 z-10">
+    <nav className="bg-zinc-800 w-full drop-shadow-md px-7 lg:px-10 xl:px-20 py-7 fixed top-0 z-10">
       <div className="lg:flex justify-between items-center">
         <div
           className={`lg:pb-0 lg:border-0 ${
@@ -74,7 +74,7 @@ const Navbar = () => {
                 className="font-bold tracking-widest duration-500"
                 onClick={handleNav}
               >
-                <li className="lg:py-0 py-7 text-gray-700 hover:text-indigo-500 cursor-pointer border border-t-0 border-x-0 border-b-gray-200 lg:border-0">
+                <li className="lg:py-0 py-7 text-white hover:text-indigo-500 cursor-pointer border border-t-0 border-x-0 border-b-gray-200 lg:border-0">
                   {link.name}
                 </li>
               </ScrollLink>

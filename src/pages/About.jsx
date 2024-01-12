@@ -4,7 +4,7 @@ import techStackData from "../data/techStackData";
 
 const About = () => {
   return (
-    <div id="about" className="bg-white px-4 md:px-20 xl:px-40 py-32">
+    <div id="about" className="bg-gray-100 px-4 md:px-20 xl:px-40 py-32">
       <p className="text-gray-900 font-[800] text-4xl tracking-widest text-center mb-20 heading">
         ABOUT ME
       </p>
@@ -40,7 +40,7 @@ const About = () => {
               </button>
             </ScrollLink>
           </div>
-          <div className="bg-white p-4">
+          <div className="p-4">
             <p className="text-2xl font-bold mb-10">Tech Stack</p>
             <div className="flex flex-wrap gap-7">
               {techStackData.map((tech) => (
