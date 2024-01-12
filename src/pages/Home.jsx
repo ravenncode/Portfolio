@@ -28,7 +28,7 @@ const Home = () => {
               Hello, I'm
             </p>
             <p className="font-[900] text-5xl lg:text-7xl lg:-ml-1 mb-4">
-              Raven <span className="text-indigo-700">Jugalbot</span>
+              Raven <span className="text-indigo-500">Jugalbot</span>
             </p>
             <p className="text-white text-base lg:text-lg">
               A passionate{" "}
