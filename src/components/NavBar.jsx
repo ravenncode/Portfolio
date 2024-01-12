@@ -32,7 +32,7 @@ const Navbar = () => {
         <div
           className={`lg:pb-0 lg:border-0 ${
             open
-              ? "pb-7 border border-t-0 border-x-0 border-b-gray-200"
+              ? "pb-7 border border-t-0 border-x-0 border-b-zinc-800"
               : "pb-0"
           }`}
         >
@@ -54,9 +54,9 @@ const Navbar = () => {
         </div>
         <div onClick={handleNav} className="absolute right-6 top-6 lg:hidden">
           {open ? (
-            <XMarkIcon className="w-8 h-8 text-gray-800 hover:text-indigo-600 cursor-pointer" />
+            <XMarkIcon className="w-8 h-8 text-white hover:text-indigo-600 cursor-pointer" />
           ) : (
-            <Bars3Icon className="w-8 h-8 text-gray-800 hover:text-indigo-600 cursor-pointer" />
+            <Bars3Icon className="w-8 h-8 text-white hover:text-indigo-600 cursor-pointer" />
           )}
         </div>
         <div
@@ -74,7 +74,7 @@ const Navbar = () => {
                 className="font-bold tracking-widest duration-500"
                 onClick={handleNav}
               >
-                <li className="lg:py-0 py-7 text-white hover:text-indigo-500 cursor-pointer border border-t-0 border-x-0 border-b-gray-200 lg:border-0">
+                <li className="lg:py-0 py-7 text-white hover:text-indigo-500 cursor-pointer border border-t-0 border-x-0 border-b-zinc-800 lg:border-0">
                   {link.name}
                 </li>
               </ScrollLink>
