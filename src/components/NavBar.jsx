@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import {
-  Bars3Icon,
-  XMarkIcon,
-  ArrowDownTrayIcon,
-} from "@heroicons/react/24/outline";
-import r from "../images/r.png";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import profile from "../images/profile-1.png";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -21,13 +17,8 @@ const Navbar = () => {
     { name: "CONTACT", link: "contact" },
   ];
 
-  const openPDF = () => {
-    const pdfPath = "../RESUME.pdf";
-    window.open(pdfPath, "_blank");
-  };
-
   return (
-    <nav className="bg-zinc-800 w-full drop-shadow-md px-7 lg:px-10 xl:px-20 py-7 fixed top-0 z-10">
+    <nav className="bg-zinc-800 w-full px-7 lg:px-10 xl:px-20 py-7 fixed top-0 z-10">
       <div className="lg:flex justify-between items-center">
         <div
           className={`lg:pb-0 lg:border-0 ${
@@ -43,16 +34,10 @@ const Navbar = () => {
             className="text-gray-800 hover:text-indigo-600 font-[700] text-lg tracking-wider cursor-pointer"
             onClick={open ? handleNav : () => {}}
           >
-            {/* <img
-              src={r}
-              className="h-10 w-10 cursor-pointer hover:scale-110 duration-300 ease-in-out"
-            /> */}
-            <p className="font-[900] text-indigo-500 hover:text-indigo-700 text-2xl">
-              RJDEV
-            </p>
+            <img src={profile} className="h-12" />
           </ScrollLink>
         </div>
-        <div onClick={handleNav} className="absolute right-6 top-6 lg:hidden">
+        <div onClick={handleNav} className="absolute right-6 top-9 lg:hidden">
           {open ? (
             <XMarkIcon className="w-8 h-8 text-white hover:text-indigo-600 cursor-pointer" />
           ) : (
@@ -80,15 +65,6 @@ const Navbar = () => {
               </ScrollLink>
             ))}
           </ul>
-          <button
-            type="button"
-            onClick={openPDF}
-            className="bg-indigo-500 hover:bg-indigo-600 transition-transform transform hover:translate-y-0.5 text-white px-4 py-2 rounded-md font-bold text-sm tracking-widest lg:ml-10 lg:my-0 my-7"
-          >
-            <div className="flex items-center">
-              <ArrowDownTrayIcon className="w-4 h-4 mr-2" /> RESUME
-            </div>
-          </button>
         </div>
       </div>
     </nav>

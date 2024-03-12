@@ -1,5 +1,5 @@
 import React from "react";
-import project1 from "../images/portfolio.png";
+import project1 from "../images/portfolio1.png";
 import portfolioData from "../data/portfolioData";
 
 const Projects = () => {
@@ -9,15 +9,17 @@ const Projects = () => {
         PROJECTS
       </p>
       <div className="md:container md:mx-auto">
-        <div className="grid xl:grid-cols-5 xl:gap-8">
-          <div className="col-span-3 p-4">
-            <img
-              src={project1}
-              alt="Portfolio"
-              className="cursor-pointer hover:scale-110 transition duration-300 ease-in-out"
-            />
+        <div className="grid xl:grid-cols-5 xl:gap-10">
+          <div className="col-span-3 p-6">
+            <div className="bg-indigo-100 rounded-3xl overflow-hidden">
+              <img
+                src={project1}
+                alt="Portfolio"
+                className="cursor-pointer hover:scale-105 transition duration-700 ease-in-out"
+              />
+            </div>
           </div>
-          <div className="col-span-2 p-6 flex flex-col justify-center items-center text-center xl:items-start xl:text-left">
+          <div className="col-span-3 xl:col-span-2 p-6 flex flex-col justify-center items-center text-center xl:items-start xl:text-left">
             <p className="text-2xl lg:text-3xl font-bold mb-6 lg:mb-8">
               Portfolio Website
             </p>
@@ -41,9 +43,9 @@ const Projects = () => {
                     alt={tech.alt}
                     className="h-auto w-10 lg:w-[40px] cursor-pointer hover:-translate-y-2 duration-150"
                   />
-                  <p className="text-gray-500 text-[0.65rem] text-center font-bold mt-2">
+                  {/* <p className="text-gray-500 text-[0.65rem] text-center font-bold mt-2">
                     {tech.name}
-                  </p>
+                  </p> */}
                 </div>
               ))}
             </div>
