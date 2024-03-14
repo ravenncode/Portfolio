@@ -19,7 +19,47 @@ const Contact = () => {
 
       <div className="md:container md:mx-auto">
         {/* Get in touch */}
-        <div className="flex flex-col gap-10 lg:flex-row lg:justify-between mb-20 p-4">
+        <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-5 lg:gap-10 mb-5 lg:mb-20 px-4">
+          <div className="p-6 border-2 rounded-xl">
+            <div className="flex align-items-center">
+              <div className="py-3">
+                <MapPinIcon className="h-7 w-7 text-indigo-500" />
+              </div>
+              <div className="ml-4 text-gray-800">
+                <p className="font-bold text-xl">Location</p>
+                <p className="text-sm lg:text-base">
+                  Cagayan de Oro, Philippines
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="p-6 border-2 rounded-xl">
+            <div className="flex align-items-center">
+              <div className="py-3">
+                <PhoneIcon className="h-7 w-7 text-indigo-500" />
+              </div>
+              <div className="ml-4 text-gray-800">
+                <p className="font-bold text-xl">Phone</p>
+                <p className="text-sm lg:text-base">(+63) 975 626 1803</p>
+              </div>
+            </div>
+          </div>
+          <div className="p-6 border-2 rounded-xl">
+            <div className="flex align-items-center">
+              <div className="py-3">
+                <EnvelopeIcon className="h-7 w-7 text-indigo-500" />
+              </div>
+              <div className="ml-4 text-gray-800">
+                <p className="font-bold text-xl">Email</p>
+                <p className="text-sm lg:text-base">
+                  developer.raven21@gmail.com
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="flex flex-col gap-10 lg:flex-row lg:justify-between mb-20 p-4">
           <div className="flex">
             <div className="bg-white rounded-full my-shadow p-3">
               <MapPinIcon className="h-7 w-7 text-indigo-500" />
@@ -51,14 +91,21 @@ const Contact = () => {
               </p>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Get in touch end */}
-        <p className="font-bold text-3xl mb-2 px-4">Write Me a Message</p>
-        <p className=" text-gray-500 mb-10 lg:text-xl px-4">
-          Feel free to contact me by filling out the form below. 👇
-        </p>
+
         <div className="flex flex-col gap-10 lg:flex-row lg:justify-between px-4 mb-10">
+          <div className="flex align-middle">
+            <img
+              src={chatting}
+              className="lg:w-[26rem] xl:w-[30rem] hidden lg:block"
+            />
+          </div>
           <div className="bg-white border-solid border-1 rounded-md p-0 w-full lg:w-1/2">
+            <p className="font-bold text-3xl mb-2">Write Me a Message</p>
+            <p className=" text-gray-500 mb-10 lg:text-xl">
+              Feel free to contact me by filling out the form below. 👇
+            </p>
             <form
               action="https://formsubmit.co/b141c7089d169825a13c60d4a1473436"
               method="POST"
@@ -113,9 +160,6 @@ const Contact = () => {
                 {isButtonDisabled ? "SUBMITTING..." : "SUBMIT"}
               </button>
             </form>
-          </div>
-          <div className="flex align-middle">
-            <img src={chatting} className="w-[24rem] hidden lg:block" />
           </div>
         </div>
       </div>

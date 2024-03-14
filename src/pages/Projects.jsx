@@ -16,6 +16,9 @@ const Projects = () => {
                 src={project1}
                 alt="Portfolio"
                 className="cursor-pointer hover:scale-105 transition duration-700 ease-in-out"
+                onClick={() =>
+                  window.open("https://nrjportfolio.vercel.app/", "_blank")
+                }
               />
             </div>
           </div>

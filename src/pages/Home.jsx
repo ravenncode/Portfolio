@@ -5,7 +5,7 @@ import { ChevronDoubleDownIcon } from "@heroicons/react/24/outline";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-import profile2 from "../images/profile2.png";
+import profile2 from "../images/home.png";
 
 const Home = () => {
   const toLinkedin = () => {
@@ -65,7 +65,7 @@ const Home = () => {
           <div className="p-4">
             <img
               src={profile2}
-              className="w-100 hover:-rotate-3 transition-transform"
+              className="w-auto hover:scale-105 transition-all"
             />
           </div>
         </div>

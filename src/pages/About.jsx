@@ -27,7 +27,7 @@ const About = () => {
                   <img
                     src={tech.image}
                     alt={tech.alt}
-                    className="h-auto w-[60px] cursor-pointer hover:-translate-y-2 duration-150"
+                    className="h-auto w-[50px] cursor-pointer hover:-translate-y-2 duration-150"
                   />
                   {/* <p className="text-gray-500 text-sm text-center font-semibold mt-2">
                     {tech.name}

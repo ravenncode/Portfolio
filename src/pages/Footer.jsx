@@ -5,7 +5,6 @@ import { EnvelopeIcon, MapIcon, PhoneIcon } from "@heroicons/react/24/solid";
 const Footer = () => {
   const toSocial = (link) => {
     window.open(link, "_blank");
-    console.log(link);
   };
 
   return (
